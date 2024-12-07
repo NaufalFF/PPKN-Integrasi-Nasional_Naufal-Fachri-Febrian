@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrasi Nasional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="home" class="page">
+    <div class="container">
+      <h1>Profil Mahasiswa</h1>
+      <img src="foto-profil.jpg" alt="Foto Profil" class="profile-pic">
+      <p><strong>Nama:</strong> Naufal Fachri Febrian</p>
+      <p><strong>NIM:</strong> 24050630037</p>
+      <p><strong>Prodi:</strong> Pendidikan Teknik Mekatronika</p>
+      <button class="btn" onclick="navigate('materi')">Ke Halaman Materi</button>
+    </div>
+  </div>
+
+  <div id="materi" class="page hidden">
+    <div class="container">
+      <h1>Integrasi Nasional</h1>
+      <div class="content">
+        <section>
+          <h2>Definisi</h2>
+          <p>Integrasi nasional adalah proses penyatuan seluruh komponen bangsa untuk mencapai keselarasan dan persatuan dalam negara.</p>
+        </section>
+        <section>
+          <h2>Peran</h2>
+          <p>Mahasiswa memiliki peran strategis sebagai agen perubahan dalam menjaga keutuhan bangsa melalui pendidikan, aksi sosial, dan advokasi.</p>
+        </section>
+        <section>
+          <h2>Prinsip-Prinsip</h2>
+          <p>1. Kebersamaan <br> 2. Toleransi <br> 3. Persatuan dalam Keberagaman</p>
+        </section>
+        <section>
+          <h2>Tantangan</h2>
+          <p>Radikalisme, intoleransi, dan konflik sosial menjadi tantangan utama bagi integrasi nasional.</p>
+        </section>
+        <section>
+          <h2>Solusi</h2>
+          <p>Pendidikan karakter, dialog antarbudaya, dan penguatan nilai-nilai Pancasila adalah solusi untuk menghadapi tantangan tersebut.</p>
+        </section>
+        <section>
+          <h2>Kesimpulan</h2>
+          <p>Integrasi nasional adalah tanggung jawab bersama, termasuk mahasiswa, untuk membangun bangsa yang harmonis dan kuat.</p>
+        </section>
+      </div>
+      <button class="btn" onclick="navigate('akhir')">Ke Halaman Akhir</button>
+    </div>
+  </div>
+
+  <div id="akhir" class="page hidden">
+    <div class="container">
+      <h1>Terima Kasih</h1>
+      <p>Terima kasih telah membaca materi ini. Mari bersama menjaga integrasi nasional.</p>
+      <button class="btn" onclick="navigate('home')">Kembali ke Halaman Awal</button>
+    </div>
+  </div>
+
+  <script>
+    function navigate(pageId) {
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.add('hidden');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
